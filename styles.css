@@ -1,0 +1,198 @@
+@font-face {
+	font-family: 'Sorts Mill Goudy';
+	src: 
+	url('source/GoudyStM-webfont.woff'),
+	url('source/GoudyStM-webfont.ttf'),
+	url('source/GoudyStM-webfont.svg'),
+	url('source/GoudyStM-webfont.eot');
+}
+
+:root {
+	--accent-color: #334563;
+}
+
+.a {
+	grid-area: a;}
+
+.b { 
+	background-color: var(--accent-color); 
+	color: white;
+	grid-area: b;}
+
+.c { 
+	text-align: center;
+	grid-area: c;}
+
+.d {
+	grid-area: d;
+	}
+
+.e {
+	padding-bottom: 0;
+	margin-bottom: 0;
+	grid-area: e;}
+
+.f {
+	grid-area: f;}
+
+.wrapper {
+	max-width: 70%;
+	height: auto;
+	margin: auto;
+	display: grid; 
+	grid-auto-rows: auto;
+	grid-column-gap: 2fr;
+	grid-row-gap: 0px; 
+	grid-template-columns: 1fr; 
+	grid-template-areas: 
+	
+		'a'
+        'b'
+        'd'
+        'e'
+        'f';
+}
+
+header, nav, footer {
+	padding: .5em;
+}
+
+header {
+	display:flex;
+	padding-bottom: .25em;
+	border-color: black;
+}
+
+#cal {
+	text-align: right;
+	float: right;
+	width: 82px;
+	height: 74px;
+	margin: 0px 0px 0px auto;
+}
+
+h1, nav, h2, p, footer {
+	font-family: 'Sorts Mill Goudy', serif;
+}
+
+a {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+h1 {
+	text-align: center;
+}
+
+nav {
+	display:flex;
+	height: auto;
+	justify-content: flex-start;
+	width: 100%;
+	flex-direction: row;
+
+}
+
+nav > a {
+	margin: auto;
+}
+
+nav > a:link {
+	color: white;
+	text-decoration: none;
+}
+
+nav > a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+nav > a:active {
+	color: orange;
+}
+
+nav > a:hover {
+	text-decoration: underline;
+}
+
+body {
+	padding: 0em;
+	margin: 0em;
+}
+
+article {
+	width: 100%;
+	padding-top: 5%;
+	padding-bottom: 0em;
+	column-gap: 2.5%;
+	column-count: 1;
+	column-width: 90%;
+
+}
+
+p {
+	margin-top: 5px;
+	margin-right: 1em;
+}
+
+a:link, a:visited {
+	color: var(--accent-color);
+	text-decoration: none;
+}
+
+a:active {
+	color: orange;
+}
+
+a:hover{ 
+	text-decoration: underline;
+ }
+
+footer { 
+	padding-top: 2em;
+	padding-bottom: 0;
+	display: flex;
+	height: 5em;
+	width: 100%;
+	text-align: center;
+	flex-direction: row;
+	justify-content: center; 
+}
+
+#banner {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+}
+
+@media (min-width: 960px) {
+	.a {
+		border-bottom: 1px var(--accent-color) solid; 
+	}
+
+	.wrapper {
+		grid-template-columns: 1fr 3fr; 
+		grid-template-areas: 
+	
+		'a a'
+        'b c'
+        'b d'
+        'b e'
+        'b f'; 
+	}
+
+	nav {
+		width: 80%;
+		flex-direction: column;
+	}
+
+	article{
+		column-count: 2;
+		column-width: 40%;
+	}
+}
+
+
+
